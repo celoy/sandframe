@@ -1,0 +1,51 @@
+# Sand-frame toy: default parameters. SI units throughout.
+# Each value is marked "guess", "recalled", "derived" or "standard".
+# Derived quantities (K, mu_m, D, U, V_i, ...) are computed in params.py, not set here.
+
+seed = 1  # every random draw in a run comes from this seed
+
+[cell]
+W_m = 0.20  # guess: frame width (x)
+H_m = 0.10  # guess: frame height (y)
+b_m = 3.0e-3  # guess: gap between the glass plates
+
+[grid]
+nx = 200  # guess: dx = W/nx = 1 mm
+ny = 100  # guess: dy = H/ny = 1 mm
+
+[fluid]
+rho_f_kg_m3 = 1150.0  # guess: glycerol-water
+mu_f_pa_s = 0.02  # guess: glycerol-water
+g_m_s2 = 9.81  # standard
+
+[mixture]
+mu_r = 30.0  # guess: mu_m = mu_r * mu_f (literature fits up to about 100 in water)
+phi_bed = 0.55  # guess: packing of the deposit and of the flipped reservoir
+n_rz = 4.65  # recalled: Richardson-Zaki exponent
+theta_r_deg = 30.0  # guess: underwater angle of repose (used from Phase 1 step 2)
+lambda_star_over_b = 3.0  # guess: most unstable wavelength / b; D is derived from it
+interface_noise = 0.05  # guess: relative noise added at the interface after a flip (step 2)
+
+[numerics]
+cfl = 0.5  # (|u|/dx + |v|/dy) dt, and V_max dt/dy, are kept below this
+diffusion_number = 0.25  # D dt (1/dx^2 + 1/dy^2) / 2 is kept below this
+dt_max_s = 0.05  # guess: upper bound on the time step
+
+# Sand classes, coarse first. color_rgb is used only by the viewer.
+[[classes]]
+name = "coarse"
+d_m = 300e-6  # guess
+rho_kg_m3 = 2650.0  # guess: quartz
+color_rgb = [74, 50, 32]  # dark brown
+
+[[classes]]
+name = "medium"
+d_m = 150e-6  # guess
+rho_kg_m3 = 2650.0  # guess: quartz
+color_rgb = [236, 120, 96]  # coral
+
+[[classes]]
+name = "fine"
+d_m = 50e-6  # guess
+rho_kg_m3 = 2500.0  # guess
+color_rgb = [245, 243, 236]  # white

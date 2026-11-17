@@ -17,6 +17,7 @@ Working title "Sandframe" (not cleared, see Open questions). This file is the si
 - 2026-11-17: brief written; nothing built yet.
 - 2026-11-17: Phase 0 built (repo celoy/sandframe, .venv on Python 3.11.7, pytest smoke test passes, empty Godot 4.7.2 project exports to build/web); waiting for the user to open the web export in Chrome.
 - 2026-11-17: user opened the Phase 0 web export in Chrome; Phase 0 accepted. Phase 1 started.
+- 2026-11-17: Phase 1 step 1 done (params, state, flow, transport, minimal sim). 15 tests pass. Test 7 as written fails at the default D (fastest mode about 40 mm at 0.3 1/s, not 9 mm at 1.7 1/s); kept as strict xfail, waiting for the user to decide on D.
 
 ## Deadline and jam
 

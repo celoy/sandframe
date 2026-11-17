@@ -2,6 +2,7 @@
 
 [tool.pytest.ini_options]
 testpaths = ["toy/tests", "model/tests"]
+pythonpath = ["toy/tests"]
 
 [tool.ruff]
 line-length = 100
@@ -11,4 +12,4 @@ target-version = "py311"
 select = ["E", "F", "I", "UP", "B"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["sandframe_toy", "sandmodel"]
+known-first-party = ["sandframe_toy", "sandmodel", "helpers"]
