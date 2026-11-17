@@ -13,9 +13,10 @@ Working title "Sandframe" (not cleared, see Open questions). This file is the si
 
 ## Status
 
-- CURRENT: Phase 0
+- CURRENT: Phase 1
 - 2026-11-17: brief written; nothing built yet.
 - 2026-11-17: Phase 0 built (repo celoy/sandframe, .venv on Python 3.11.7, pytest smoke test passes, empty Godot 4.7.2 project exports to build/web); waiting for the user to open the web export in Chrome.
+- 2026-11-17: user opened the Phase 0 web export in Chrome; Phase 0 accepted. Phase 1 started.
 
 ## Deadline and jam
 
