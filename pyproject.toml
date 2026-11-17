@@ -1,0 +1,14 @@
+# Repo-wide tool settings only. Packages: toy/pyproject.toml (sandframe_toy), model/ (Phase 3).
+
+[tool.pytest.ini_options]
+testpaths = ["toy/tests", "model/tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sandframe_toy", "sandmodel"]
